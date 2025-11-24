@@ -72,6 +72,17 @@ public class MainController implements Initializable {
             usuarioSeleccionado = newSelection;
             mostrarDetalleUsuario();
         });
+        tableView.setRowFactory(tv -> {
+            TableRow<Usuario> row = new TableRow<>();
+            row.setOnMouseClicked(event -> {
+                if (!row.isEmpty() && event.getClickCount() == 2) {
+                    Usuario rowData = row.getItem();
+                    mostrarModalDetalleUsuario(rowData);
+                }
+            });
+            return row;
+        });
+
     }
 
     private void mostrarDetalleUsuario() {
@@ -144,4 +155,24 @@ public class MainController implements Initializable {
         usuarioSeleccionado = null;
         mostrarDetalleUsuario();
     }
+    private void mostrarModalDetalleUsuario(Usuario usuario) {
+        if (usuario == null) return;
+
+        StringBuilder info = new StringBuilder();
+        info.append("Correo: ").append(usuario.getEmail()).append("\n");
+        info.append("Plataforma: ").append(usuario.getPlataforma()).append("\n");
+        info.append("Versión: ").append(usuario.getVersion()).append("\n");
+        info.append("Rol: ").append(Boolean.TRUE.equals(usuario.getIs_admin()) ? "Admin" : "Usuario").append("\n");
+        // Separar fecha y hora si están en el mismo campo
+        String[] partes = usuario.getFecha() != null ? usuario.getFecha().split(" ") : new String[]{"", ""};
+        info.append("Fecha de creación: ").append(partes.length > 0 ? partes[0] : "").append("\n");
+        info.append("Hora de creación: ").append(partes.length > 1 ? partes[1] : "").append("\n");
+
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Detalle de Usuario");
+        alert.setHeaderText("Información completa del usuario seleccionado");
+        alert.setContentText(info.toString());
+        alert.showAndWait();
+    }
+
 }
