@@ -55,12 +55,5 @@ public class UsuarioDAO implements DAO<Usuario> {
                 .filter(u -> u.getId().equals(id))
                 .findFirst();
     }
-
-    // Método adicional para login por email (simplificado, solo email, sin password)
-    public Optional<Usuario> findByEmail(String email) {
-        return store.stream()
-                .filter(u -> u.getEmail().equalsIgnoreCase(email))
-                .findFirst();
-    }
 }
 
