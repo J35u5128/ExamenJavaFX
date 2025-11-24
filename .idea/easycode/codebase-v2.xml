@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="com.obiscr.chatgpt.settings.EasyCodeState">
+    <option name="projectFiles" value="$PROJECT_DIR$/src/main/java/org/example/examenjavafx/controllers/MainController.java;C:/Users/JesúsÁngelAlcaláPabl/IdeaProjects/ExamenJavaFX/src/main/java/org/example/examenjavafx/dao/DAO.java;C:/Users/JesúsÁngelAlcaláPabl/IdeaProjects/ExamenJavaFX/src/main/java/org/example/examenjavafx/dao/VideojuegoDAO.java;C:/Users/JesúsÁngelAlcaláPabl/IdeaProjects/ExamenJavaFX/src/main/java/org/example/examenjavafx/model/Videojuego.java;C:/Users/JesúsÁngelAlcaláPabl/IdeaProjects/ExamenJavaFX/src/main/java/org/example/examenjavafx/utils/JavaFXUtil.java;C:/Users/JesúsÁngelAlcaláPabl/IdeaProjects/ExamenJavaFX/src/main/java/org/example/examenjavafx/App.java;C:/Users/JesúsÁngelAlcaláPabl/IdeaProjects/ExamenJavaFX/src/main/java/module-info.java;C:/Users/JesúsÁngelAlcaláPabl/IdeaProjects/ExamenJavaFX/src/main/module-info.java" />
+  </component>
+</project>
